@@ -1,34 +1,121 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
+/* MEN'S HOUSE BARBER - Custom Styles */
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #0f0f10;
+.App {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    background-color: #000000;
 }
 
-.App-link {
-    color: #61dafb;
+/* Hero Section */
+.hero-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Service Cards */
+.service-card {
+    transition: all 0.3s ease-out;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: #FFFFFF;
+}
+
+/* Button hover effects */
+.btn-primary {
+    transition: all 0.3s ease-out;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* Navigation */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #FFFFFF;
+    transition: width 0.3s ease-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Calendar custom styles */
+.calendar-day {
+    transition: all 0.2s ease-out;
+}
+
+.calendar-day:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Form inputs */
+.form-input {
+    background: transparent;
+    border-bottom: 1px solid #27272a;
+    transition: border-color 0.3s ease-out;
+}
+
+.form-input:focus {
+    border-color: #FFFFFF;
+    outline: none;
+}
+
+/* Table styles */
+.table-row {
+    transition: background-color 0.2s ease-out;
+}
+
+.table-row:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Status badges */
+.status-confirmed {
+    background-color: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+}
+
+.status-completed {
+    background-color: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+}
+
+.status-cancelled {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+/* Loading spinner */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+/* Glassmorphism effect */
+.glass {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Grid lines decoration */
+.grid-lines {
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
 }
