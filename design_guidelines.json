@@ -1,0 +1,132 @@
+{
+  "project_name": "MEN'S HOUSE BARBER",
+  "theme": "dark",
+  "visual_style": {
+    "mood": "Noir, Masculine, Premium, Sharp, Elegant",
+    "color_palette": {
+      "background": "#000000",
+      "foreground": "#FFFFFF",
+      "card": "#09090b",
+      "card_foreground": "#FFFFFF",
+      "popover": "#09090b",
+      "popover_foreground": "#FFFFFF",
+      "primary": "#FFFFFF",
+      "primary_foreground": "#000000",
+      "secondary": "#27272a",
+      "secondary_foreground": "#FFFFFF",
+      "muted": "#27272a",
+      "muted_foreground": "#a1a1aa",
+      "accent": "#27272a",
+      "accent_foreground": "#FFFFFF",
+      "destructive": "#7f1d1d",
+      "destructive_foreground": "#FFFFFF",
+      "border": "#27272a",
+      "input": "#27272a",
+      "ring": "#FFFFFF"
+    },
+    "gradients": {
+      "subtle_glow": "radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0) 70%)",
+      "sharp_fade": "linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000000 100%)"
+    }
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Playfair Display, serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-bold tracking-tighter",
+      "h2": "text-3xl md:text-5xl font-semibold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-medium",
+      "body_large": "text-lg md:text-xl font-light leading-relaxed",
+      "body_base": "text-base font-normal leading-relaxed",
+      "caption": "text-sm text-muted-foreground uppercase tracking-widest"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid (Mode A for Marketing, Mode B for Dashboard)",
+    "spacing": {
+      "section_padding": "py-24 md:py-32",
+      "container_padding": "px-6 md:px-12",
+      "element_gap": "gap-8 md:gap-12"
+    },
+    "border_radius": {
+      "default": "rounded-none",
+      "card": "rounded-sm",
+      "button": "rounded-none"
+    }
+  },
+  "components": {
+    "Button": {
+      "default": "bg-white text-black hover:bg-gray-200 rounded-none uppercase tracking-widest font-bold px-8 py-4 transition-all duration-300",
+      "outline": "border border-white/20 bg-transparent text-white hover:bg-white hover:text-black rounded-none uppercase tracking-widest",
+      "ghost": "text-white hover:text-gray-300 hover:bg-transparent uppercase tracking-widest"
+    },
+    "Card": {
+      "style": "bg-zinc-950 border border-zinc-800 rounded-sm hover:border-zinc-600 transition-colors duration-300",
+      "interactive": "group relative overflow-hidden"
+    },
+    "Input": {
+      "style": "bg-transparent border-b border-zinc-700 rounded-none px-0 py-4 focus:border-white focus:ring-0 placeholder:text-zinc-600 text-lg transition-all"
+    },
+    "Navigation": {
+      "style": "fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10"
+    }
+  },
+  "animations": {
+    "micro_interactions": {
+      "hover_lift": "hover:-translate-y-1 transition-transform duration-300 ease-out",
+      "fade_in": "animate-in fade-in duration-700",
+      "slide_up": "animate-in slide-in-from-bottom-8 duration-700"
+    },
+    "page_transitions": "Enter: fade-in slide-in-from-bottom-4"
+  },
+  "assets": {
+    "image_urls": {
+      "hero_background": "https://images.unsplash.com/photo-1593702233354-259d1f794ed1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwzfHxiYXJiZXIlMjBjdXR0aW5nJTIwaGFpciUyMG1lbiUyMGhhaXJjdXQlMjBiZWFyZCUyMHRyaW0lMjBibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8fHx8MTc3MjkwODU5M3ww&ixlib=rb-4.1.0&q=85",
+      "services_haircut": "https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxiYXJiZXIlMjBjdXR0aW5nJTIwaGFpciUyMG1lbiUyMGhhaXJjdXQlMjBiZWFyZCUyMHRyaW0lMjBibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8fHx8MTc3MjkwODU5M3ww&ixlib=rb-4.1.0&q=85",
+      "services_beard": "https://images.unsplash.com/photo-1628099003488-98aa1c9405e3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwyfHxiYXJiZXIlMjBjdXR0aW5nJTIwaGFpciUyMG1lbiUyMGhhaXJjdXQlMjBiZWFyZCUyMHRyaW0lMjBibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8fHx8MTc3MjkwODU5M3ww&ixlib=rb-4.1.0&q=85",
+      "shop_interior": "https://images.unsplash.com/photo-1536520843734-bfb7a8a3ebcf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwzfHxiYXJiZXJzaG9wJTIwaW50ZXJpb3IlMjBkYXJrJTIwbHV4dXJ5fGVufDB8fHx8MTc3MjkwODU5Mnww&ixlib=rb-4.1.0&q=85"
+    },
+    "icons_library": "lucide-react"
+  },
+  "accessibility": {
+    "contrast_check": "Ensure white text on black background meets WCAG AAA. Use pure white #FFFFFF for body text.",
+    "focus_states": "outline-none ring-2 ring-white ring-offset-2 ring-offset-black"
+  },
+  "design_rules": {
+    "universal": [
+      "NO GRADIENTS: Use solid blocks of black and white.",
+      "SHARP EDGES: Avoid rounded corners larger than 2px.",
+      "TYPOGRAPHY AS IMAGE: Use large, bold typography to replace images where possible.",
+      "NEGATIVE SPACE: Use extensive black space to create luxury feel.",
+      "GRID LINES: Subtle, visible grid lines (opacity 10%) can enhance the technical/precision feel."
+    ],
+    "anti_patterns": [
+      "Do not use colorful buttons (blue, green, red). Keep everything monochrome.",
+      "Do not use drop shadows. Use borders or contrast for depth.",
+      "Do not use default Shadcn radius. Override to 0 or 2px."
+    ]
+  },
+  "instructions_to_main_agent": {
+    "setup": "Install fonts: Playfair Display and Manrope. Configure Tailwind colors to match palette.",
+    "implementation_order": [
+      "1. Setup Tailwind Config (Colors, Fonts, Radius).",
+      "2. Create Layout Wrapper (Navbar, Footer).",
+      "3. Build Landing Page (Hero, Services Grid, CTA).",
+      "4. Build Booking Flow (Service Selection, Calendar, Form).",
+      "5. Build Admin Dashboard (Login, Appointments, Management)."
+    ],
+    "specific_overrides": "Override all Shadcn components to remove rounded corners. Use 'border-zinc-800' for all borders."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Don't make generic centered layouts.",
+    "Create depth through z-index and subtle borders, not shadows.",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Use 'sonner' for toasts.",
+    "Components MUST use named exports.",
+    "Pages MUST use default exports."
+  ]
+}
