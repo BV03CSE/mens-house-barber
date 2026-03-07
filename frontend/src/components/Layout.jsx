@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { Scissors, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export const Layout = () => {
@@ -14,6 +14,16 @@ export const Layout = () => {
 
   const isActive = (path) => location.pathname === path;
 
+  // MH Logo SVG Component
+  const MHLogo = ({ size = 40 }) => (
+    <svg width={size} height={size} viewBox="0 0 100 100" className="transition-transform group-hover:scale-105">
+      <circle cx="50" cy="50" r="48" fill="#000000" stroke="#FFFFFF" strokeWidth="2"/>
+      <text x="50" y="42" textAnchor="middle" fill="#FFFFFF" fontSize="22" fontWeight="bold" fontFamily="serif">M/H</text>
+      <text x="50" y="58" textAnchor="middle" fill="#FFFFFF" fontSize="7" fontWeight="bold" fontFamily="sans-serif" letterSpacing="1">MEN'S HOUSE</text>
+      <text x="50" y="70" textAnchor="middle" fill="#FFFFFF" fontSize="8" fontWeight="bold" fontFamily="sans-serif" letterSpacing="2">BARBER</text>
+    </svg>
+  );
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
@@ -26,8 +36,7 @@ export const Layout = () => {
               className="flex items-center gap-3 group"
               data-testid="nav-logo"
             >
-              <Scissors className="w-6 h-6 transition-transform group-hover:rotate-45" />
-              <span className="font-display text-xl tracking-wider">MEN'S HOUSE</span>
+              <MHLogo size={50} />
             </Link>
 
             {/* Desktop Navigation */}
@@ -104,8 +113,7 @@ export const Layout = () => {
             {/* Brand */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <Scissors className="w-5 h-5" />
-                <span className="font-display text-lg tracking-wider">MEN'S HOUSE BARBER</span>
+                <MHLogo size={40} />
               </div>
               <p className="text-zinc-500 text-sm leading-relaxed">
                 Experiența premium în îngrijirea masculină. Tradiție și eleganță.
@@ -132,7 +140,9 @@ export const Layout = () => {
             <div>
               <h4 className="uppercase text-sm tracking-widest font-bold mb-4">Contact</h4>
               <div className="space-y-2 text-zinc-500 text-sm">
-                <p>Program: Luni - Sâmbătă</p>
+                <p>Str. Zorilor nr.15 ap1 sc.B</p>
+                <p>Brașov, România</p>
+                <p className="mt-4">Program: Luni - Sâmbătă</p>
                 <p>09:00 - 18:00</p>
               </div>
             </div>

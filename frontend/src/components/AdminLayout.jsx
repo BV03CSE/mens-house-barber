@@ -1,6 +1,5 @@
 import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
 import { 
-  Scissors, 
   LayoutDashboard, 
   Calendar, 
   Layers, 
@@ -13,6 +12,16 @@ import { useState, useEffect } from "react";
 import { toast } from "sonner";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+
+// MH Logo SVG Component
+const MHLogo = ({ size = 40 }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="48" fill="#000000" stroke="#FFFFFF" strokeWidth="2"/>
+    <text x="50" y="42" textAnchor="middle" fill="#FFFFFF" fontSize="22" fontWeight="bold" fontFamily="serif">M/H</text>
+    <text x="50" y="58" textAnchor="middle" fill="#FFFFFF" fontSize="7" fontWeight="bold" fontFamily="sans-serif" letterSpacing="1">MEN'S HOUSE</text>
+    <text x="50" y="70" textAnchor="middle" fill="#FFFFFF" fontSize="8" fontWeight="bold" fontFamily="sans-serif" letterSpacing="2">BARBER</text>
+  </svg>
+);
 
 export const AdminLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -58,8 +67,7 @@ export const AdminLayout = () => {
         {/* Logo */}
         <div className="p-6 border-b border-zinc-800">
           <Link to="/" className="flex items-center gap-3">
-            <Scissors className="w-5 h-5" />
-            <span className="font-display text-lg tracking-wider">MEN'S HOUSE</span>
+            <MHLogo size={40} />
           </Link>
         </div>
 
@@ -102,8 +110,7 @@ export const AdminLayout = () => {
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-black border-b border-zinc-800">
         <div className="flex items-center justify-between px-4 h-16">
           <Link to="/" className="flex items-center gap-2">
-            <Scissors className="w-5 h-5" />
-            <span className="font-display text-lg">MEN'S HOUSE</span>
+            <MHLogo size={36} />
           </Link>
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}

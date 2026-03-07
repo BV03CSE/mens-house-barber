@@ -4,10 +4,20 @@ import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { toast } from "sonner";
-import { Scissors, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import axios from "axios";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+
+// MH Logo SVG Component
+const MHLogo = ({ size = 80 }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="48" fill="#000000" stroke="#FFFFFF" strokeWidth="2"/>
+    <text x="50" y="42" textAnchor="middle" fill="#FFFFFF" fontSize="22" fontWeight="bold" fontFamily="serif">M/H</text>
+    <text x="50" y="58" textAnchor="middle" fill="#FFFFFF" fontSize="7" fontWeight="bold" fontFamily="sans-serif" letterSpacing="1">MEN'S HOUSE</text>
+    <text x="50" y="70" textAnchor="middle" fill="#FFFFFF" fontSize="8" fontWeight="bold" fontFamily="sans-serif" letterSpacing="2">BARBER</text>
+  </svg>
+);
 
 export default function AdminLoginPage() {
   const navigate = useNavigate();
@@ -72,10 +82,9 @@ export default function AdminLoginPage() {
         {/* Logo */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Scissors className="w-8 h-8" />
+            <MHLogo size={80} />
           </div>
-          <h1 className="font-display text-3xl tracking-tight">MEN'S HOUSE</h1>
-          <p className="text-zinc-500 text-sm mt-2">
+          <p className="text-zinc-500 text-sm mt-4">
             {isSetup ? "Panou Administrare" : "Configurare Inițială"}
           </p>
         </div>
