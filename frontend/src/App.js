@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "./components/ui/sonner";
+import { InstallPWA } from "./components/InstallPWA";
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import BookingPage from "./pages/BookingPage";
@@ -35,6 +36,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Toaster position="top-right" theme="dark" />
+      <InstallPWA />
     </div>
   );
 }

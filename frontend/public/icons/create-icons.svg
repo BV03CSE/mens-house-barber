@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#000000"/>
+  <g transform="translate(256, 256)">
+    <!-- Scissors icon -->
+    <path d="M-80,-60 L80,60 M80,-60 L-80,60" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"/>
+    <circle cx="-100" cy="-80" r="35" fill="none" stroke="#FFFFFF" stroke-width="16"/>
+    <circle cx="-100" cy="80" r="35" fill="none" stroke="#FFFFFF" stroke-width="16"/>
+  </g>
+  <text x="256" y="420" text-anchor="middle" fill="#FFFFFF" font-family="serif" font-size="48" font-weight="bold">MEN'S HOUSE</text>
+</svg>
